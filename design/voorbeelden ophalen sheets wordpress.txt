@@ -1,0 +1,15 @@
+//START CODE VOOR INLADEN CSS EN JAVASCRIPT HOMEPAGE---------------------------------------------------------
+function Jorik_css_home_page(){
+    if(is_page(63)){
+    wp_enqueue_style('home_page_css', get_stylesheet_directory_uri(). "/assets/css/main-menu.css");
+
+    wp_enqueue_script('home_page_js', get_stylesheet_directory_uri()."/assets/js/home-page.js");
+}
+}
+add_action('wp_enqueue_scripts', 'Jorik_css_home_page');
+
+
+
+
+
+
