@@ -102,15 +102,16 @@ body {
             padding: 0 2rem;
         }
 
-        & .logo-link {
+        & .logo {
             display: flex;
             flex-grow: 1;
             
-            & .logo {
-                width: 124px;
-                height: 24px;
-                fill: var(--white);
-            }
+            &-svg {
+                    width: 124px;
+                    height: 24px;
+                    fill: var(--white);
+                }            
+            
         }
 
         
