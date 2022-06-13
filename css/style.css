@@ -1,3 +1,6 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
 /* Colours */
 :root {
   --soft-red: hsl(7, 99%, 70%);
@@ -51,6 +54,7 @@ body {
   height: 100vh;
   font-family: "Barlow", sans-serif;
   font-size: 1.8rem;
+  overflow: hidden;
 }
 
 .container {
