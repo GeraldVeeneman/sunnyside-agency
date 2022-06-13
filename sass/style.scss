@@ -464,83 +464,102 @@ main {
 
     .testimonials {
         background-color: var(--very-light-red-white);
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(37.5rem, 100%), 1fr));
-        padding-top: 5rem;
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(min(37.5rem, 100%), 1fr));
+        //padding-top: 5rem;
         padding-bottom: 3rem;
-        column-gap: 2.5rem;
-        row-gap: 7rem;
+        // column-gap: 2.5rem;
+        // row-gap: 7rem;
+        padding: 15% 5%;
 
         @media only screen and (min-width: $bp-2-columns) {
             padding: 10% 7.5%;
-        }
+        }      
 
         &__title {
-            grid-area: 1/1 / 2/-1;
-
             display: flex;
             justify-content: center;
             align-items: center;
-
 
             color: var(--grayish-blue);
             font-size: 1.8rem;
             text-transform: uppercase;
             letter-spacing: 0.3rem;
-            //padding-bottom: 5rem;
+            padding-bottom: 7rem;
         }
 
-        .testimonial {
+        .container-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 0 2.5rem;
+            width: 100%;
+            row-gap: 9rem;
+
+            .testimonial {
+                display: flex;
+                flex-direction: column;
+                width: 33.33%;
+                min-width: 375px;
+                padding: 0 2.5rem;
             
-
-            &__picture {
-                width: 7rem;
-                height: 7rem;
-                border-radius: 50%;
-                margin-bottom: 3rem;
-
-            }
-
-            &__quote {
-                color: var(--very-dark-grayish-blue);
-                line-height: 3rem;
-                margin-bottom: 3rem;
-
-                @media only screen and (min-width: $bp-2-columns) {
-                    height: 12rem; // max. 4 lines of quote
+                &__picture {
+                    align-self: center;
+                    width: 7rem;
+                    height: 7rem;
+                    border-radius: 50%;
+                    margin-bottom: 3rem;
+        
                 }
-            }
-
-            &__caption {
-
-                &--name {
-                    font: {
-                        family: $font-secondary;
+        
+                &__quote {
+                    color: var(--very-dark-grayish-blue);
+                    line-height: 3rem;
+                    margin-bottom: 3rem;
+        
+                    @media only screen and (min-width: $bp-2-columns) {
+                        height: 12rem; // max. 4 lines of quote
                     }
-                    margin-bottom: 1rem;
                 }
+        
+                &__caption {
 
-                &--role {
-
-                    font: {
-                        family: $font-primary;
-                        size: 1.4rem;                        
-                        weight: 700;
+                    &--name {
+                        font: {
+                            family: $font-secondary;
+                        }
+        
+                        margin-bottom: 1rem;
                     }
-                    color: var(--grayish-blue);
+        
+                    &--role {
+        
+                        font: {
+                            family: $font-primary;
+                            size: 1.4rem;
+                            weight: 700;
+                        }
+        
+                        color: var(--grayish-blue);
+                    }
                 }
             }
-        }        
+        }  
     }
 
     .gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min(18.75rem, 50%), 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(37.5rem, 100%), 1fr));
 
-        img {
-            width: 100%;                       
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(18.75rem, 100%), 1fr));
+
+            img {
+                width: 100%;
+                display: block;                       
+            }
         }
 
     }

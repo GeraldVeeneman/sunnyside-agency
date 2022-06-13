@@ -388,12 +388,8 @@ main section.graphic-photo .photography {
 }
 main .testimonials {
   background-color: var(--very-light-red-white);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(37.5rem, 100%), 1fr));
-  padding-top: 5rem;
   padding-bottom: 3rem;
-  column-gap: 2.5rem;
-  row-gap: 7rem;
+  padding: 15% 5%;
 }
 @media only screen and (min-width: 750px) {
   main .testimonials {
@@ -401,7 +397,6 @@ main .testimonials {
   }
 }
 main .testimonials__title {
-  grid-area: 1/1/2/-1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -409,32 +404,46 @@ main .testimonials__title {
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
+  padding-bottom: 7rem;
 }
-main .testimonials .testimonial {
+main .testimonials .container-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  width: 100%;
+  row-gap: 9rem;
+}
+main .testimonials .container-flex .testimonial {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+  min-width: 375px;
   padding: 0 2.5rem;
 }
-main .testimonials .testimonial__picture {
+main .testimonials .container-flex .testimonial__picture {
+  align-self: center;
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
   margin-bottom: 3rem;
 }
-main .testimonials .testimonial__quote {
+main .testimonials .container-flex .testimonial__quote {
   color: var(--very-dark-grayish-blue);
   line-height: 3rem;
   margin-bottom: 3rem;
 }
 @media only screen and (min-width: 750px) {
-  main .testimonials .testimonial__quote {
+  main .testimonials .container-flex .testimonial__quote {
     height: 12rem;
   }
 }
-main .testimonials .testimonial__caption--name {
+main .testimonials .container-flex .testimonial__caption--name {
   font-family: "Fraunces", serif;
   margin-bottom: 1rem;
 }
-main .testimonials .testimonial__caption--role {
+main .testimonials .container-flex .testimonial__caption--role {
   font-family: "Barlow", sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
@@ -442,10 +451,15 @@ main .testimonials .testimonial__caption--role {
 }
 main .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(18.75rem, 50%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(37.5rem, 100%), 1fr));
 }
-main .gallery img {
+main .gallery .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(18.75rem, 100%), 1fr));
+}
+main .gallery .gallery img {
   width: 100%;
+  display: block;
 }
 
 .footer {

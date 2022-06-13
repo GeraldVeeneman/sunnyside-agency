@@ -86,6 +86,7 @@
 
         <section class="testimonials">
             <h2 class="testimonials__title">client testimonials</h2>
+            <div class="container-flex">
             <figure class="testimonial testimonial--emily">
                 <img src="images/image-emily.jpg" alt="Emily R." class="testimonial__picture">
                 <blockquote class="testimonial__quote">
@@ -116,13 +117,37 @@
                     <div class="testimonial__caption--role">Business Owner</div>
                 </figcaption>
             </figure>
+            </div> <!-- End div container-flex -->
         </section>
 
         <section class="gallery">
-            <img src="images/mobile/image-gallery-milkbottles.jpg" alt="Milk bottles">
-            <img src="images/mobile/image-gallery-orange.jpg" alt="Orange">
-            <img src="images/mobile/image-gallery-cone.jpg" alt="Cone">
-            <img src="images/mobile/image-gallery-sugar-cubes.jpg" alt="Sugar cubes">        
+            <div class="gallery">
+                <picture>
+                    <source media="(max-width:749px)" srcset="images/mobile/image-gallery-milkbottles.jpg">
+                    <source media="(min-width:750px)" srcset="images/desktop/image-gallery-milkbottles.jpg">
+                    <img src="images/mobile/image-gallery-milkbottles.jpg" alt="Milk bottles">
+                </picture>
+
+                <picture>
+                    <source media="(max-width:749px)" srcset="images/mobile/image-gallery-orange.jpg">
+                    <source media="(min-width:750px)" srcset="images/desktop/image-gallery-orange.jpg">
+                    <img src="images/mobile/image-gallery-orange.jpg" alt="Orange">
+                </picture>
+                                
+            </div>
+            <div class="gallery">
+                <picture>
+                    <source media="(max-width:749px)" srcset="images/mobile/image-gallery-cone.jpg">
+                    <source media="(min-width:750px)" srcset="images/desktop/image-gallery-cone.jpg">
+                    <img src="images/mobile/image-gallery-cone.jpg" alt="Cone">
+                </picture>
+                
+                <picture>
+                    <source media="(max-width:749px)" srcset="images/mobile/image-gallery-sugar-cubes.jpg">
+                    <source media="(min-width:750px)" srcset="images/desktop/image-gallery-sugarcubes.jpg">
+                    <img src="images/mobile/image-gallery-sugar-cubes.jpg" alt="Sugar cubes">
+                </picture>  
+            </div>        
         </section>
 
     </main>
